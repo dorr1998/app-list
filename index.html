@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <!--[if lt IE 9]>
+      <script src="./lib/html5shiv/html5shiv.min.js"></script>
+      <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+    <title>APP List</title>
+  </head>
+  <body>
+    <header><h1>Transsion</h1></header>
+    <nav><h2>APP List</h2></nav>
+    <section>
+      <div id="app-list">
+        <!-- 条件搜索 -->
+        <div class="app_search text-left">
+          <input type="text" placeholder="请输入apk名称" class="search_input" />
+          <button class="btn btn-default search_btn">搜索</button>
+        </div>
+        <div class="wrapper">
+          <ul class="clearfix app-list">
+            <!-- 模板位置 -->
+          </ul>
+        </div>
+        <!-- 分页插件 -->
+        <div class="paginator"><ul id="paginator"></ul></div>
+      </div>
+    </section>
+    <script type="text/template" id="tmp">
+      {{ each list v i }}
+         <li class="product">
+          <span class="app-img"><img src="{{v.appImage}}" alt="" height="80" width="80" /></span> <span class="app-name">{{v.appName}}</span>
+          <a class="btn btn-default" href="detail?appId={{v.id}}" role="button">下载</a>
+        </li>
+      {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

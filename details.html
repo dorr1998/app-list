@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/details.css" />
+    <!--[if lt IE 9]>
+      <script src="./lib/html5shiv/html5shiv.min.js"></script>
+      <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+    <title>APP List</title>
+  </head>
+  <body>
+    <header><h1>Transsion</h1></header>
+    <nav><h2>APP List</h2></nav>
+    <section class="app-details">
+      <div class="container">
+        <div class="pic"><img src="" alt="" /></div>
+        <p class="app-name"></p>
+        <div class="form"></div>
+        <!-- 模板位置 -->
+      </div>
+    </section>
+    <!-- 模板 -->
+    <script type="text/html" id="tpl">
+      <form action="">
+        <table>
+          <tr>
+            <td class="w-100"><label for="">版本:</label></td>
+            <td>
+              <select name="version" id="version"></select>
+              <span class="size">{{list.appSize}}</span> <a class="download" href="{{list.appUrl}}">立即下载</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="w-100"><label for="">版本日期:</label></td>
+            <td><span class="date">{{list.createTime}}</span></td>
+          </tr>
+          <tr>
+            <td class="w-100"><label for="">版本说明:</label></td>
+            <td><span class="descript">{{list.versionInfo}}</span></td>
+          </tr>
+          <tr>
+            <td class="w-100"><label for="">下载二维码:</label></td>
+            <td>
+              <div id="qrcode"></div>
+              <input class="qrcode" name="url" type="text" hidden />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </script>
+
+    <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./lib/qrcode/qrcode.min.js"></script>
+    <script src="./js/details.js"></script>
+  </body>
+</html>

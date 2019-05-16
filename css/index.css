@@ -1,0 +1,150 @@
+/* 重置一些默认样式 */
+
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 1500px; */
+  min-width: 320px;
+  text-align: center;
+}
+ul,
+ol {
+  list-style: none;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+input {
+  border: none;
+}
+/* 头部 */
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  text-indent: 20px;
+}
+
+/* 导航 */
+nav h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: #0444f5;
+}
+/* 搜索 */
+#app-list .app_search {
+  height: 34px;
+  vertical-align: middle;
+  margin: 30px 0;
+  margin-left: 11%;
+}
+#app-list .search_input {
+  height: 34px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  text-indent: 5px;
+}
+
+/* 内容部分 */
+/* 屏幕大于等于 750px */
+@media (min-width: 750px) {
+  section {
+    width: 100%;
+    /* height: 600px; */
+    text-align: center;
+  }
+  section #app-list {
+    width: 90%;
+  }
+  section #app-list .app-list {
+    margin: 30px auto;
+    height: 340px;
+  }
+  section #app-list li.product {
+    float: left;
+    width: 33%;
+    height: 100px;
+    vertical-align: middle;
+    margin-top: 10px;
+  }
+  section #app-list li.product .app-img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    /* position: relative;
+    top: -40px; */
+  }
+  section #app-list li.product img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  section #app-list li.product .app-name {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 100px;
+    margin: 0 10px;
+  }
+
+  section .paginator {
+    height: 35px;
+    text-align: right;
+  }
+}
+@media (max-width: 750px) {
+  /* 移动端 */
+  section {
+    width: 100%;
+    /* height: 600px; */
+    text-align: center;
+  }
+  section #app-list {
+    width: 90%;
+  }
+  section #app-list li.product {
+    width: 80%;
+    height: 100px;
+    vertical-align: middle;
+    margin: 10px 0;
+  }
+  section #app-list li.product .app-img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    /* position: relative;
+    top: -40px; */
+  }
+  section #app-list li.product img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  section #app-list li.product .app-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 100px;
+    margin: 0 10px;
+  }
+  .pagination {
+    display: none;
+  }
+}

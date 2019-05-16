@@ -1,0 +1,95 @@
+/* 重置一些默认样式 */
+
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 1500px; */
+  min-width: 320px;
+  text-align: center;
+}
+ul,
+ol {
+  list-style: none;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+/* 头部 */
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  text-indent: 20px;
+}
+
+/* 导航 */
+nav h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: #0444f5;
+}
+/* 内容区域 */
+.app-details .container {
+  margin-top: 20px;
+  text-align: center;
+}
+.app-details .container .app-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px auto;
+}
+.app-details .container .form {
+  width: 90%;
+  margin: 50px auto;
+}
+.app-details table {
+  margin: 0 auto;
+}
+
+.app-details table .size {
+  margin: 0 10px;
+}
+.app-details .pic img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.app-details table img {
+  width: 100px;
+  height: 100px;
+}
+.w-100 {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.descript {
+  max-width: 80%;
+  word-wrap: break-word;
+}
+.app-details table td {
+  text-align: left;
+  line-height: 30px;
+}
+.app-details table label {
+  width: 100px;
+  font-size: 16px;
+}
